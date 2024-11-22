@@ -66,8 +66,9 @@ public class ItemAddedManager : IItemAddedManager
                     _logger.LogDebug("Notifying for {ItemName}", item.Name);
 
                     // Send notification.
-                    string message = $"🎬 {item.Name} ({item.ProductionYear})\n" +
-                                     $"      added to library";
+                        string message = $"➕ **Nueva película en Aura Flicks**\n\n" +
+                                         $"{item.Name} ({item.ProductionYear})\n\n" +
+                                         $"{eventArgs.Item.Overview}";
 
                     string subtype = "ItemAddedMovies";
                     bool addImage = true;
